@@ -1,7 +1,7 @@
 (function(){
 	"use strict";
 	window.addEventListener("load", function(){
-        var startInterval, preloadedCount = 10,
+        var startInterval, preloadedCount = 60,
             screen, screenElement = document.getElementsByClassName("screen")[0],
             imagesArray = imagePreloader(preloadedCount, "screens/screen_", "jpg");
         screen =  new FrameAnimation(screenElement, {
@@ -10,7 +10,7 @@
             imagesArray: imagesArray,
             count: preloadedCount,
             repeat: true,
-            time: 62
+            time: 50
         });
         startInterval = setInterval(function(){
             if(imagesArray[preloadedCount - 1].complete){
